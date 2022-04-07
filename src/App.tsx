@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+
+import { Routes, 
+         Route } from "react-router-dom";
+
+import { AdminRoutes, 
+         PublicRoutes } from "./routes";
+
 import NotFound404 from "./core/NotFound404";
-import AdminRoutes from "./routes/AdminRoutes";
-import PublicRoutes from "./routes/PublicRoutes";
+
 
 function App() {
   const [adminRole, setAdminRole] = useState(false);
