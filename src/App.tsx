@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import NotFound404 from "./core/NotFound404";
+import AdminRoutes from "./routes/AdminRoutes";
+import PublicRoutes from "./routes/PublicRoutes";
 
 function App() {
+  const [adminRole, setAdminRole] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/*" element={<PublicRoutes />} />
+        <Route path="/*" element={<NotFound404 />} />
+        {adminRole && <Route path="/admin/*" element={<AdminRoutes />} />}
+      </Routes>
+    </>
   );
 }
 
