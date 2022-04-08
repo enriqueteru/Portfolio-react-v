@@ -15,6 +15,7 @@ import { Footer,
 const PublicRoutes = () => {
   return (<>
     <Nav />
+    <main className='main'>
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/services" element={<Services />} />
@@ -24,6 +25,7 @@ const PublicRoutes = () => {
     <Route path="/contact" element={<Contact />} />
     <Route path="/*" element={<NotFound404 />} />
     </Routes>
+    </main>
     <Footer />
     </>
   )
