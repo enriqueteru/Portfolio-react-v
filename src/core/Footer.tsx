@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { legal, menu, social } from "../helpers/contenido/es/contenido";
 
@@ -32,15 +31,15 @@ const Footer = () => {
       </div>
       <div className="footer__col2">
         <ul className="footer__col-list">
-          {legal.map((item) => (
-            <NavLink to={item.link}>
+          {legal.map(item => (
+            <NavLink key={item.link} to={item.link}>
               <li className="footer__col-list-item">{item.item}</li>
             </NavLink>
           ))}
         </ul>
         <div className="footer__social">
-          {social.map((item) => (
-            <a className="footer__social" target="_blank" href={item.link}>
+          {social.map(item => (
+            <a className="footer__social" key={item.link} href={item.link}>
               {item.item}
             </a>
           ))}

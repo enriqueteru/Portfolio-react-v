@@ -6,7 +6,35 @@
 }
 
 .main{
-    min-height: 90vh;
+    padding: 15vh 0; 
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    margin:0 auto;
+}
+
+.title-big{
+font-size: 80px;
+line-height: 80*1.5px;
+font-weight: 400;
+}
+
+.title-medium{
+font-size: 25px;
+line-height: 20*1.5px;
+font-weight: 200;
+}
+.subtitle{
+font-size: 40px;
+line-height: 40*1.5px;
+font-weight: 200;
+        
+}
+.text{
+font-size: 18px;
+line-height: 18*1.5px;
+font-weight: 200;
+        
 }
 
 //FONTS
@@ -19,3 +47,8 @@
 @import './styles/core/nav';
 @import './styles/core/footer';
 
+//PAGES
+@import './styles/pages/contact';
+
+//COMPONENTS
+@import './styles/components/form/form';

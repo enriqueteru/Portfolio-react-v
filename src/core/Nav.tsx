@@ -13,7 +13,7 @@ const Nav = () => {
      </div>
      <div className='nav__menu'>
        <ul>
-{menu.map(item=> <NavLink to={item.link}><li className="nav__menu-item">{item.item}</li></NavLink>)}
+{menu.map(item=> <NavLink key={item.link} to={item.link}><li className="nav__menu-item">{item.item}</li></NavLink>)}
        </ul>
      </div>
    </nav>

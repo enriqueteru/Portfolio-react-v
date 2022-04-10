@@ -1,31 +1,32 @@
-import React from "react";
-
+import { NavLink } from "react-router-dom";
+import Form from "../components/form/Form";
+import { ContactPage, InfoAside, social } from "../helpers/contenido/es/contenido";
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, alias
-        architecto cumque sit reiciendis dolor illum delectus rerum corrupti
-        saepe fugit optio quae magni. Aut amet odit corporis quas veniam!
-      </p>
-      <div>
-        <h3>Title 2</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-          repellat delectus maxime sequi, asperiores et officiis quod
-          praesentium nemo sapiente adipisci, quibusdam aut deleniti culpa
-          commodi quia doloribus obcaecati! Iusto
-        </p>
-      </div>
-      <div>
-        <form>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <button>Enviar</button>
-        </form>
-      </div>
+    <div className="form">
+       <div  className="form__contact-form">
+         <h2 className="title-big">{ContactPage.title}</h2>
+         <p className="subtitle">{ContactPage.subtitle}</p>
+         <Form />
+       </div>
+       <div className="form__aside">
+       <h3 className="subtitle">{ContactPage.asideTitle}</h3>
+       <img className="img-decoration" src="assets/eye-etg.gif" alt="eye-etg" />
+       <ul className="footer__col-list">
+       {InfoAside.map(item => (
+            <a key={item.link} href={item.link}>
+              <li className="footer__col-list-item title-medium">{item.item}</li>
+            </a>
+          ))}
+          {social.map(item => (
+            <a key={item.link} href={item.link}>
+              <li className="footer__col-list-item title-medium">{item.name}</li>
+            </a>
+          ))}
+           
+
+        </ul>
+       </div>
     </div>
   );
 };
