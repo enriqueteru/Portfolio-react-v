@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { legal, menu, social } from "../helpers/contenido/es/contenido";
+import { legal, menu, social, Footer as FooterInfo } from "../helpers/contenido/es/contenido";
 
 const Footer = () => {
+
+  const actualDate = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="footer__col">
@@ -13,10 +15,7 @@ const Footer = () => {
           />
         </NavLink>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-          eligendi, sapiente facilis dolor eum provident sed nostrum. Iure nam
-          optio quos quam, voluptatibus rem molestiae fugiat fuga sapiente
-          accusantium distinctio?
+          {FooterInfo.subtitle}
         </p>
       </div>
 
@@ -45,6 +44,11 @@ const Footer = () => {
           ))}
         </div>
       </div>
+      <div className="footer__full">
+        {FooterInfo.legal}{actualDate}<br/>
+        {FooterInfo.info}
+        </div>
+     
     </div>
   );
 };

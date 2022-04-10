@@ -1,0 +1,27 @@
+
+
+@font-face {
+    font-family: 'Mixta Ess Sharp It';
+    src: url('./MixtaEssSharpIt-Bold.eot');
+    src: url('./MixtaEssSharpIt-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./MixtaEssSharpIt-Bold.woff2') format('woff2'),
+        url('./MixtaEssSharpIt-Bold.woff') format('woff'),
+        url('./MixtaEssSharpIt-Bold.ttf') format('truetype'),
+        url('./MixtaEssSharpIt-Bold.svg#MixtaEssSharpIt-Bold') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mixta Ess Sharp';
+    src: url('./MixtaEssSharp-Bold.eot');
+    src: url('./MixtaEssSharp-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./MixtaEssSharp-Bold.woff2') format('woff2'),
+        url('./MixtaEssSharp-Bold.woff') format('woff'),
+        url('./MixtaEssSharp-Bold.ttf') format('truetype'),
+        url('./MixtaEssSharp-Bold.svg#MixtaEssSharp-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

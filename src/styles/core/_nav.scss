@@ -81,6 +81,7 @@ a:-webkit-any-link {
             list-style: none;
             text-decoration: none;
             &-item {
+                position: relative;
                 display: inline-flex;
                 color: white;
                 font-weight: 200;
@@ -88,8 +89,27 @@ a:-webkit-any-link {
                 margin: 0 15px;
                 text-decoration: none;
                 list-style: none;
+                transition: border 2000ms;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    width: 0px;
+                    border-bottom: 1px solid white;
+                    transition: 0.4s;}
+              
                 &:hover {
                     cursor: pointer;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        width: 100%;
+                        margin: 0 auto;
+                        border-bottom: 1px solid white;
+                        transition:  0.3s;
+                        
+                    }
         
                 }
             }

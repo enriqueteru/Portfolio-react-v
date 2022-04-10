@@ -117,3 +117,11 @@ export const ContactPage = {
     asideTitle:'',
     
     };
+
+export const Footer = {
+    title:'Enrique Teruel Agency',
+    subtitle: 'Programador / diseñador Murciano, enfocado en UX / UI - ES6, Typescript, Node.js, React, Angular, PHP, HTML & CSS, aunque siempre dispuesto a seguir aprendiendo y adaptandome a las nuevas necesidades del mercado.',
+    legal:'Todos los derechos reservados Enrique Teruel © ',
+    info: 'Esta web está desarrollada con tecnologías como: Typescript, Redux, React, Sass, Sequelize ORM, API - NodeJs '
+    
+    };
